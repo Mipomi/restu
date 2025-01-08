@@ -18,3 +18,16 @@ navbar.addEventListener('click', function(){
     navbar.classList.toggle('nav-active');
     navMenu.classList.toggle('hidden');
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBars = document.querySelectorAll(".progress");
+    progressBars.forEach(bar => {
+      const percent = bar.getAttribute("data-percent");
+      bar.style.width = percent + "%";
+      
+      const percentText = bar.querySelector(".percent-text");
+      setTimeout(() => {
+        percentText.style.opacity = 1;
+      }, 1500);
+    });
+  });
