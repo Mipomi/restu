@@ -27,3 +27,12 @@ body{
 .nav-active > span:nth-child(3){
     @apply -rotate-45;
 }
+.progress {
+    width: 0;
+    position: relative;
+    transition: width 2s ease-in-out;
+}
+.percent-text {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
